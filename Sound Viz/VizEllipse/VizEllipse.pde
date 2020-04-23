@@ -23,8 +23,8 @@ void setup()
 
 void draw()
 { 
- // background(0);
-//  float t = map(mouseX, 0, width, 0, 1);
+  // background(0);
+  //  float t = map(mouseX, 0, width, 0, 1);
   beat.detect(player.mix);
   fill(#1A1F18, 20);
   noStroke();
@@ -44,11 +44,8 @@ void draw()
 
     float x2 = (r + player.left.get(i)*150)*cos(i*2*PI/bsize);
     float y2 = (r + player.left.get(i)*150)*sin(i*2*PI/bsize);
-   
-   if(random(100)<33)stroke(222,25,25);
-   else if(random(100)<66)stroke(22,222,22);
-   else stroke(22,22,222);
-    //stroke(-1, 100);
+
+    stroke(-1, 100);
     line(x, y, x2, y2);
   }
   beginShape();
@@ -62,11 +59,8 @@ void draw()
 
     pushStyle();
     stroke(-1);
-    
-     if(random(100)<33)stroke(222,25,25);
-   else if(random(100)<66)stroke(22,222,22);
-   else stroke(22,22,222);
 
+    stroke(255);
 
     strokeWeight(2);
     point(x2, y2);
